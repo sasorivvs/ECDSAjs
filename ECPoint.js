@@ -1,5 +1,4 @@
 import BN from "bignumber.js";
-import sha256 from "hash.js";
 import { getModulo, findInverse, getBN, toBin } from "./Utils.js";
 import { curveConfig, generatorPoint } from "./secp256k1.js";
 
@@ -7,13 +6,6 @@ export default class ECPoint {
 	x = null;
 	y = null;
 	EC = null;
-
-	/**
-	 *
-	 * @param x {number|BigNumber|string}
-	 * @param y {number|BigNumber|string}
-	 * @param EC {{a: BigNumber, b: BigNumber, p: BigNumber}}
-	 */
 
 	constructor(x, y, EC = curveConfig) {
 		this.x = getBN(x);
