@@ -6,13 +6,13 @@ import {
 	getSha256,
 	getBN,
 } from "./Utils.js";
-import { curveConfig, generatorPoint } from "./secp256k1.js";
+import { generatorPoint } from "./secp256k1.js";
 
 function getSecp256k1Point(x, y) {
 	return new ECPoint(x, y);
 }
 
-const GPoint = getSecp256k1Point(generatorPoint.x, generatorPoint.y);
+export const GPoint = getSecp256k1Point(generatorPoint.x, generatorPoint.y);
 
 export function signMessage(message, privateKey) {
 	let k;
