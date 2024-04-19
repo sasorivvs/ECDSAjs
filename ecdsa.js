@@ -54,17 +54,3 @@ export function verifySignature(message, { r, s }, publicKey) {
 
 	return r.isEqualTo(c.x);
 }
-
-// let PrivateKey = getLargeRandom();
-// let PublicKey = GPoint.multiply(PrivateKey);
-//console.log(`x: ${PublicKey.x}, y: ${PublicKey.y}`);
-// let PublicKey1 = new ECPoint(PublicKey.x, PublicKey.y);
-// let address = getSha256(PublicKey1.x);
-// let mess = getLargeRandom();
-// let { s, r } = signMessage(mess, PrivateKey);
-//s = 1
-// console.log(verifySignature(mess, { r, s }, PublicKey));
-// console.log(`PrivateKey: ${PrivateKey}`);
-// console.log(`PublicKey: ${PublicKey.x}`);
-// console.log(`Address: ${"0x" + address.slice(-40)}`);
-// console.log(`MessageHash: ${getSha256(mess)}`);
